@@ -1,4 +1,4 @@
-#Задание 1
+# Задание 1
 A = float(input())
 B = float(input())
 C = float(input())
@@ -19,9 +19,8 @@ else:
 
 print(maximum, minimum)
 
-#Задание 2
+# Задание 2
 import math
-
 a = float(input())
 b = float(input())
 c = float(input())
@@ -47,8 +46,8 @@ else:
         x1 = (-b + math.sqrt(D)) / (2 * a)
         x2 = (-b - math.sqrt(D)) / (2 * a)
         print(x1, x2)
-        
-#Залание 3        
+
+# Залание 3
 A = float(input())
 B = float(input())
 C = float(input())
@@ -66,8 +65,19 @@ else:
         print("Равнобедренный")
     else:
         print("Разносторонний")
-        
-#Задание 5        
+
+#Задание 4
+x = float(input())
+y = float(input())
+
+if x * x + y * y <= 1:
+    print("Yes")
+elif x <= 0 and y <= 0 and x + y >= -2:
+    print("Yes")
+else:
+    print("No")
+
+# Задание 5
 M = int(input())
 D = int(input())
 
@@ -105,8 +115,8 @@ elif M == 1 or M == 3 or M == 5 or M == 7 or M == 8 or M == 10 or M == 12:
 else:
     if D < 1 or D > 31:
         print(-1)
-        
-#Задание 6        
+
+# Задание 6
 K = int(input())
 
 if K < 0:
@@ -117,11 +127,19 @@ elif (K % 10 == 2 or K % 10 == 3 or K % 10 == 4) and not (K % 100 == 12 or K % 1
     print("Мы нашли в лесу", K, "гриба")
 else:
     print("Мы нашли в лесу", K, "грибов")
-    
-#Задание 7
+
+# Задание 7
 t = int(input())
 
 if t % 5 < 3:
     print("Зеленый")
 else:
     print("Красный")
+
+#Задание 8
+y = int(input())
+
+hours = y // 30
+minutes = (y % 30) * 2
+
+print(hours, minutes)
