@@ -168,7 +168,6 @@ def factorial_recursive(n):
 
     return n * factorial_recursive(n - 1)
 
-
 def main():
     n = int(input())
 
@@ -176,6 +175,28 @@ def main():
     print(factorial_while(n))
     print(factorial_recursive(n))
 
+if __name__ == "__main__":
+    main()
+
+#Задание 9
+def sqrt_cycle(x, eps):
+    y = 1.0
+    while abs(y - x / y) > eps:
+        y = (y + x / y) / 2
+    return y
+
+def sqrt_recursion(x, eps, y = 1.0):
+    y_next = (y + x / y) / 2
+    if abs(y_next - y):
+        return y_next
+    return sqrt_recursion(x, eps, y_next)
+
+def main():
+    x = float(input())
+    eps = float(input())
+
+    print(sqrt_cycle(x, eps))
+    print(sqrt_recursion(x, eps))
 
 if __name__ == "__main__":
     main()
